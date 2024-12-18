@@ -1,21 +1,40 @@
 let canvas = document.getElementById("background");
 let ctx = canvas.getContext("2d"); // Get the drawing context
 
-let boids; // Declare list so that the on_resize call doesn't error
+let boids = []; // Declare list so that the on_resize call doesn't error
+
+let boid_density = 1/15000; // One boid per 15,000 pixels
+
+let num_boids = 0;
+
 
 function on_resize(event) {
-	if (boids) for (let boid of boids) {
+	if (boids.length > 0) for (let boid of boids) {
 		if (boid.p.x > 0.5 * canvas.width) {
 			boid.p.x += window.innerWidth - canvas.width; // Keep boids same distance from nearest vertical edge
 		}
 	}
 	
 	canvas.width = window.innerWidth;
-	canvas.height = document.body.scrollHeight;
+	canvas.height = document.getElementById("main_container").scrollHeight;
 	canvas.style.width = canvas.width;
 	canvas.style.height = canvas.height;
+	
+	
+	num_boids = Math.round(canvas.width * canvas.height * boid_density);
+	let change = num_boids - boids.length;
+	
+	console.log(change);
+	
+	if (change > 0) {
+		for (let i = 0; i < change; i++) boids.push(new Boid());
+	} else if (change < 0) {
+		for (let i = 0; i < change; i++) {
+			boids.splice(Math.floor(Math.random() * boids.length), 1);
+		}
+	}
+	
 }
-on_resize();
 window.addEventListener("resize", on_resize);
 
 
@@ -136,10 +155,14 @@ function tick(dt) { // Simulate a time step
 }
 
 
-
-boids = [];
 let boids_next = [];
-for (let i = 0; i < 200; i++) boids.push(new Boid());
+
+
+
+
+
+// Spawn initial boids
+on_resize();
 
 // Roughly simulate 30 seconds on page load so some flocks start forming
 for (let i = 0; i < 30; i++) tick(1);
