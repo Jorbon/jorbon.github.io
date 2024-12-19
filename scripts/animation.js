@@ -1,14 +1,21 @@
+let main_div = document.getElementById("main_container");
 let canvas = document.getElementById("background");
 let ctx = canvas.getContext("2d"); // Get the drawing context
 
 let boids = []; // Declare list so that the on_resize call doesn't error
-
 let boid_density = 1/15000; // One boid per 15,000 pixels
-
 let num_boids = 0;
+
+let mobile = false;
 
 
 function on_resize(event) {
+	mobile = (window.innerHeight > window.innerWidth) || (window.innerWidth < 929); // Best I can do on a static file server
+	
+	if (mobile) main_div.style.width = "auto";
+	else main_div.style.width =  "50%";
+	
+	
 	if (boids.length > 0) for (let boid of boids) {
 		if (boid.p.x > 0.5 * canvas.width) {
 			boid.p.x += window.innerWidth - canvas.width; // Keep boids same distance from nearest vertical edge
@@ -23,8 +30,6 @@ function on_resize(event) {
 	
 	num_boids = Math.round(canvas.width * canvas.height * boid_density);
 	let change = num_boids - boids.length;
-	
-	console.log(change);
 	
 	if (change > 0) {
 		for (let i = 0; i < change; i++) boids.push(new Boid());
@@ -171,9 +176,13 @@ for (let i = 0; i < 30; i++) tick(1);
 let previous_time = performance.now();
 
 function draw() {
+	requestAnimationFrame(draw);
+	if (mobile) return;
+	
 	let now = performance.now();
 	let dt = (now - previous_time) / 1000 * 1;
 	previous_time = now;
+	
 	
 	if (dt > 1) dt = 1; // Prevent flocks from scattering if the page pauses for a while
 	
@@ -216,8 +225,6 @@ function draw() {
 			}
 		}
 	}
-	
-	requestAnimationFrame(draw);
 }
 
 draw();
