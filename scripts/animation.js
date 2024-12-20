@@ -23,7 +23,7 @@ function on_resize(event) {
 	}
 	
 	canvas.width = window.innerWidth;
-	canvas.height = document.getElementById("main_container").scrollHeight;
+	canvas.height = main_div.scrollHeight;
 	canvas.style.width = canvas.width;
 	canvas.style.height = canvas.height;
 	
@@ -182,6 +182,8 @@ function draw() {
 	let now = performance.now();
 	let dt = (now - previous_time) / 1000 * 1;
 	previous_time = now;
+	
+	if (canvas.height != main_div.scrollHeight) on_resize();
 	
 	
 	if (dt > 1) dt = 1; // Prevent flocks from scattering if the page pauses for a while
