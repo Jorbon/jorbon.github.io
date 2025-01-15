@@ -186,7 +186,7 @@ function draw() {
 	if (canvas.height != main_div.scrollHeight) on_resize();
 	
 	
-	if (dt > 1) dt = 1; // Prevent flocks from scattering if the page pauses for a while
+	if (dt > 0.1) dt = 0.1; // Prevent flocks from scattering if the page pauses for a while
 	
 	tick(dt);
 	
