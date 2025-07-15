@@ -15,6 +15,7 @@ body {
     padding: 30pt;
     padding-top: 10pt;
     margin: auto;
+    min-width: 500pt;
 }
 
 #background {
@@ -32,20 +33,22 @@ body {
 h1 {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 40pt;
-    margin-top: 23pt;
+    margin-top: 5pt;
+    margin-bottom: 20pt;
 }
 
 h2 {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 30pt;
-    margin-bottom: 20pt;
+    margin-bottom: 5pt;
     margin-top: 10pt;
 }
 
 h3 {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 20pt;
-    margin-top: -15pt;
+    margin-top: 0pt;
+    margin-bottom: 0pt;
 }
 
 p {
@@ -76,7 +79,7 @@ table {
 
 .menu_table {
     font-size: 15pt;
-    margin-top: -15pt;
+    margin-top: 0pt;
     
     th {
         font-weight: bold;

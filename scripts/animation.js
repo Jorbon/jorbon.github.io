@@ -10,10 +10,9 @@ let mobile = false;
 
 
 function on_resize(event) {
-    mobile = (window.innerHeight > window.innerWidth) || (window.innerWidth < 929); // Best I can do on a static file server
     
-    if (mobile) main_div.style.width = "auto";
-    else main_div.style.width = "50%";
+    main_div.style.width = "50%";
+    mobile = (window.innerHeight > window.innerWidth || main_div.clientWidth + 15 >= window.innerWidth); // Best I can do on a static file server
     
     if (main_div.scrollHeight < window.innerHeight)
         main_div.style.marginTop = (window.innerHeight - main_div.scrollHeight) / 2 + "px";
@@ -189,7 +188,7 @@ function draw() {
     if (mobile) return;
     
     let now = performance.now();
-    let dt = (now - previous_time) / 1000 * 0.5;
+    let dt = (now - previous_time) / 1000 * 0.25;
     previous_time = now;
     
     if (canvas.height != main_div.scrollHeight) on_resize();

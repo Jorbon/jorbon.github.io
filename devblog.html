@@ -16,29 +16,35 @@
             <th><a href="./index.html">Home</a></th>
             <th><a href="./about.html">About Me</a></th>
             <th><a href="./projects.html">My Projects</a></th>
-            <th class="current"><a href="./devblog.html">Game Devblog</a></th>
             <th><a href="./demos.html">Demos</a></th>
+            <th class="current"><a href="./devblog.html">Game Devblog</a></th>
             <th><a href="./music.html">Music Stuff</a></th>
         </tr></table>
+        <h1>Game Devblog</h1>
         <hr>
         
-        <h1>Game Devblog</h1>
         
         <h2>Introduction Post</h2>
         <h3>June 2025</h3>
         
         <p class="indent">
-            I'm working on a game engine to use in future indie games that I want to develop in my free time. I want this page to be a blog of sorts where I can talk about my progress and any interesting designs or ideas I implement into the engine. It's written in Rust and OpenGL, and only depends on the bare minimum set of basic crates to create a cross-platform application, since I prefer to design more of the architecture myself. Also, I have recently made the repo private in case I want to sell future games that use it.
+            I'm working on a game engine to use in future indie games that I want to develop in my free time. I want this page to be a blog of sorts where I can talk about my progress and any interesting designs or ideas I implement into the engine. It's written in Rust and OpenGL, and only depends on the bare minimum set of basic crates to create a cross-platform application, since I prefer to design more of the architecture myself.
+        </p><p class="indent">
+            I started development in the summer of 2024. The core idea in the engine is that it's a voxel engine, but allows voxels to include a sloped face in any direction. A robust physics system allows physics objects to interact with these slopes just as reliably as aligned voxel edges, which addresses common physics problems that most game engines face while also providing unique level design opportunities.
+        </p><p class="indent">
+            Here is a very early screenshot of the engine, showing simple noise terrain with a voxel mesh in an isometric view.
         </p>
         
+        <img src="assets/devblog/01_terrain.png">
+        
         <p class="indent">
-            The core idea in the engine right now is that it's a voxel engine, but allows voxels to include a sloped face in any direction. A robust physics system allows physics objects to interact with these slopes just as reliably as aligned voxel edges, which opens up a lot of possibilities for level design.
+            And this capture shows a small pyramid made of sloped tiles in perspective projection.
         </p>
         
-        <img src="assets/game_engine_pyramid.png">
+        <img src="assets/devblog/01_pyramid.png">
         
         <p class="indent">
-            Development is early and inconsistent so I can't predict how often updates will happen, but I'll share this capture in the meantime. It shows a small pyramid made from four sloped voxels. It also has complete physics interactions, but the picture doesn't show that.
+            Development is early and inconsistent so I can't predict how often updates will happen. The engine does not have a proper name yet either, but I'm brainstorming some options. Finally, I'm choosing to keep the repo private in case I want to eventually sell a game that uses the code.
         </p>
         
         <hr>

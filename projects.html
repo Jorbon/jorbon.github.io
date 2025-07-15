@@ -16,41 +16,94 @@
             <th><a href="./index.html">Home</a></th>
             <th><a href="./about.html">About Me</a></th>
             <th class="current"><a href="./projects.html">My Projects</a></th>
-            <th><a href="./devblog.html">Game Devblog</a></th>
             <th><a href="./demos.html">Demos</a></th>
+            <th><a href="./devblog.html">Game Devblog</a></th>
             <th><a href="./music.html">Music Stuff</a></th>
         </tr></table>
-        <hr>
-        
         <h1>Projects</h1>
-        
-        
-        <h2>Recent Publication: SC24 Research Poster</h2>
+        <hr>
         
         <p class="indent">
-            Last November I published and presented a poster at Supercomputing 2024 on my current research project with the <a href="https://sites.google.com/view/esam-el-araby/research-group" target="_blank">KUARQ</a> research group. The goal of the project is to develop a quantum algorithm emulation platform for the Cerebras WSE, making use of its highly parallel architecture for the demanding emulation process.
+            (Projects with a web-hosted demo are listed on the <a href="./demos.html">Demos</a> page instead of this one.)
         </p>
         
-        <p style="text-align: center; font-weight: bold"><a href="https://sc24.conference-program.com/presentation/?id=post185&sess=sess487", target="_blank">Publication Site</a></p>
         
-        <img id="poster" src="./assets/Ben_Phillips_SC24_Poster.png">
+        <h2>SC24 Research Poster</h2>
+        <h3>November 2024</h3>
         
-        <p style="text-align: center; font-weight: bold"><a href="./assets/Ben_Phillips_SC24_Poster.pdf", target="_blank">Full resolution PDF</a></p>
+        <img src="./assets/projects/SC24_Poster_Ben_Phillips.png">
+        
+        <h3><a href="https://sc24.conference-program.com/presentation/?id=post185&sess=sess487", target="_blank">Publication Site</a> | <a href="./assets/projects/SC24_Poster_Ben_Phillips.pdf", target="_blank">Full resolution PDF</a></h3>
+        
+        <p class="indent">
+            Last November I published and presented a poster at Supercomputing 2024 on my current research project with the <a href="https://sites.google.com/view/esam-el-araby/research-group" target="_blank">KUARQ</a> research group. The goal of the project was to develop a quantum algorithm emulation platform for the Cerebras WSE, making use of its highly parallel architecture for the demanding emulation process.
+        </p>
+        
+        
+        <h2>Minecraft Mod: Cool Elytra Roll</h2>
+        <h3>2021 - Present</h3>
+        
+        <table><tr>
+            <img style="width: 40%" src="./assets/projects/cool_elytra_1.png">
+            <img style="width: 40%" src="./assets/projects/cool_elytra_2.png">
+        </tr></table>
+        
+        <h3><a href="https://www.curseforge.com/minecraft/mc-mods/cool-elytra-roll" target="_blank">Curseforge</a> | <a href="https://modrinth.com/mod/cool-elytra-roll" target="_blank">Modrinth</a></h3>
+        
+        <p class="indent">
+            This is the first Minecraft mod that I have created, published, and maintained. The mod uses vector math and linear algebra to make the camera and controls of the flight system closer to real aviation physics. It does this by applying extra transoformation matrices to the camera while transforming inputs to different coordinate spaces. The repository has a handful of other contributors who have helped me add a configuration menu and keep the mod up to date with the game.
+        </p>
+        
+        <!-- No curseforge api key, probably not worth doing -->
+        <!-- <script>
+            fetch("https://api.modrinth.com/v2/project/cool-elytra-roll", { method: "GET" })
+            .then(response => {
+                if (response.ok) return response.json()
+            }).then(data => console.log(data.downloads))
+            fetch("https://api.curseforge.com/v1/mods/cool-elytra-roll", { method: "GET" })
+            .then(response => {
+                if (response.ok) return response.json()
+            }).then(data => console.log(data))
+        </script> -->
+        
+        
+        <h2>Disk Pie Utility</h2>
+        <h3>May 2024</h3>
+        
+        <table><tr>
+            <img style="width: 30%" src="./assets/projects/disk_pie_1.png">
+            <img style="width: 47%" src="./assets/projects/disk_pie_2.png">
+        </tr></table>
+        
+        <h3><a href="https://github.com/Jorbon/disk_pie">GitHub Repo</a></h3>
+        
+        <p class="indent">
+            This desktop application does a multithreaded scan of all files on the root directory and displays the file system as a tiered pie chart scaled by storage size. Files in folders cascade outwards so that relative file size is visible for all folder levels at once. The path and exact size of a file or folder can be seen by hovering over its slice. Clicking on a slice draws a new pie chart with that directory in the root position.
+        </p><p class="indent">
+            This application was developed in under two days to help find things taking up too much disk space. Performance and aesthetics were both difficult to achieve when drawing an entire file system. A culling algorithm working in polar coordinates identifies slices and levels that are off-screen, while groups of tiny sub-pixel slices are combined for drawing.
+        </p><p class="indent">
+            This is my first project to use a creative commons license, which I plan to use frequently going forwards.
+        </p>
+        
+        
+        <h2>OpenGL Graphics Engine</h2>
+        <h3>August 2023 - February 2024</h3>
+        
+        <table><tr>
+            <img style="width: 40%" src="./assets/projects/gl_engine_1.png">
+            <img style="width: 40%" src="./assets/projects/gl_engine_2.png">
+        </tr></table>
+        
+        <h3><a href="https://github.com/Jorbon/gl_engine">GitHub Repo</a></h3>
+        
+        <p class="indent">
+            This is a 3D renderer that uses OpenGL shaders to implement both common graphics techniques and experimental artistic effects. Texturing, specular mapping, several variations of smoothed shadow mapping, a blinn-phong shading model, and a complex post-processing shader were all implemented. The post shader discretizes color channels to limit the color palette and uses a modified Sobel kernel to outline feature edges, both of which create a toon-like aesthetic that I want to use in a future project.
+        </p>
+        
         
         <hr>
         
-        <p style="text-align: center;">More project sections under construction!</p>
-            <!-- <tr>
-                <th>Wikidungeon</th>
-                <th>HackKU 2023 winning project</th>
-                <th><a href="https://devpost.com/software/wikidungeon" target="_blank">Devpost Page</a></th>
-            </tr><tr>
-                <th>Cool Elytra Roll</th>
-                <th>Minecraft mod with over 110K downloads</th>
-                <th><a href="https://www.curseforge.com/minecraft/mc-mods/cool-elytra-roll" target="_blank">Curseforge Page</a></th>
-            </tr> -->
-            
-            
+        <p style="text-align: center">More project sections on the way!</p>
         
         <hr>
     </div>
