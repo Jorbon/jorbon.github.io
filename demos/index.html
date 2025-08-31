@@ -1,0 +1,58 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Ben Phillips - Demos</title>
+    <link rel="icon" href="/icon.png">
+    <link href="/style.css" rel="stylesheet" type="text/css">
+    <script defer src="/scripts/animation.js"></script>
+</head>
+<body>
+    <canvas id="background"></canvas>
+    
+    <div id="main_container">
+        <hr>
+        <h2>Ben Phillips - Official Website</h2>
+        <table class="menu_table"><tr>
+            <th><a href="/">Home</a></th>
+            <th><a href="/about">About Me</a></th>
+            <th><a href="/projects">My Projects</a></th>
+            <th class="current"><a href="/demos">Demos</a></th>
+            <th><a href="/projects/game_dev">Game Devblog</a></th>
+            <th><a href="/music">Music Stuff</a></th>
+        </tr></table>
+        <h1>Demos</h1>
+        <hr>
+        
+        
+        <h2><a href="https://jorbon.github.io/js_fractal_viewer/" target="_blank">Fractal Explorer</a></h2>
+        <table><tr>
+            <img style="width: 40%" src="/projects/js_fractal_viewer/fractal.png">
+            <img style="width: 40%" src="/projects/js_fractal_viewer/julia.png">
+        </tr></table>
+        <p class="indent">
+            This JavaScript app renders views of the mandelbrot fractal. Progress is shown as animation of the area being filled in as the boundaries of the fractal become more detailed. The spacebar centers the view on the mouse cursor, while up and down arrows change the zoom level by a factor of 2x. A julia fractal corresponding to a certain point in the complex plane can also be viewed by selecting the point with the mouse cursor and pressing J. The M key returns to the mandelbrot view.
+        </p>
+        
+        <h2><a href="https://jorbon.github.io/js_graphics_pipeline/" target="_blank">3D Software Renderer</a></h2>
+        <img src="/projects/js_graphics_pipeline/frame.png">
+        <p class="indent">
+            Pure JavaScript implementation of a standard 3D graphics pipeline that would normally occur within a GPU. The demo includes a scene mesh and texture from an old PS1 Spyro game. Because this relies entirely on JS processing and HTML canvas calls for drawing individual pixels, only 1-4 frames per second is expected.
+        </p><p class="indent">
+            This project includes perspective projection, mesh processing, polygon clipping, depth-buffering, lighting, and texture sampling with perspective-accurate UV mapping.
+        </p>
+        
+        <h2><a href="https://jorbon.github.io/befunge_interpreter/" target="_blank">Befunge Interpreter</a></h2>
+        <p class="indent">
+            Editor and runtime environment for the Befunge esoteric programming language. This language uses treats text files as a 2D grid of single-character instructions, and control flow is achieved by changing the direction that the "execution head" moves. The editor supports the entire Befunge-93 language spec, which is described on <a href="https://en.wikipedia.org/wiki/Befunge" target="_blank">the Wikipedia page</a>. Saving and loading is not directly supported, but the user can easily copy-paste their program to a local text file and back.
+        </p>
+        
+        <h2><a href="https://jorbon.github.io/js_globe_gen/" target="_blank">Globe Generator</a></h2>
+        <img src="/projects/js_globe_gen/globe.png">
+        <p class="indent">
+            An earth-like globe is procedurally generated each time the page loads. This is done by generating a heightmap from a sperical slice of fractal Perlin noise, then building a mesh and colorizing a texture based on the heightmap information. Rendering uses WebGL, but the generator does not, so this demo takes several moments to load.
+        </p>
+        
+        <hr>
+    </div>
+</body>
+</html>
