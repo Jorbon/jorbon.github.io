@@ -23,7 +23,7 @@
         <h1>Projects</h1>
         <hr>
         
-        <p class="indent">
+        <p>
             (Projects with a web-hosted demo are listed on the <a href="/demos">Demos</a> page instead of this one.)
         </p>
         
@@ -47,7 +47,7 @@
         <hr>
         
         
-        <!-- <h2 id="gisp2_camera">GISP2 Recon Camera</h2>
+        <h2 id="gisp2_camera">GISP Recon Camera</h2>
         <h3>January - May 2025</h3>
         
         <table><tr>
@@ -58,7 +58,11 @@
         <h3><a href="https://github.com/Jorbon/gisp2_camera", target="_blank">Device Code</a> | <a href="https://github.com/Jorbon/camera_serial_monitor", target="_blank">Host Monitor App</a></h3>
         
         <p class="indent">
-            Description in progress
+            I designed and built a camera system to investigate the state of a Greenland Ice Sheet Project (GISP) borehole at summit station. The hole was sealed off decades ago, and now researchers want to survey it to help plan the re-drilling operation. The operating environment is very cold, dark, and space-constrained, and involves unique risks. Specifically, the device needed to fit in a 4cm cylindrical radius and operate at -30°C.
+        </p><p class="indent">
+            Everything beyond these constraints and my budget was up to me to choose a strategy, parts, and structure. My prototype uses three separate OV2640 image sensors and wide-angle lenses to achieve an uninterrupted 360° view of the walls of the borehole. I chose a Teensy 4.1 as the microcontroller for its high clock rate, large GPIO array, narrow footprint, and low cost. Finally, power and data from a computer on the surface would be delivered through a 300ft CAT6 cable soldered to the Teensy's USB pads.
+        </p><p class="indent">
+            The firmware for the microcontroller achieves the complex task of receiving and relaying a real-time image signal. This makes some code speed-critical, as it determines the maximum data rate of the image feed. On top of this, the OV2640 has very poor documentation, and configuring the sensor through I2C required extensive research and trial-and-error. I also wrote the host app for monitoring the image feeds and communicating with the device. Device firmware is baremetal C++, host app is written in Rust.
         </p>
             
         <hr>
@@ -72,10 +76,10 @@
         <h3><a href="https://universityofkansas.itch.io/team-b-2025", target="_blank">Fictitious Itch.io Page</a> | <a href="fictitious/Fictitious - Game Design Document.pdf", target="_blank">Game Design Document</a></h3>
         
         <p class="indent">
-            Description in progress
+            I was the sound designer for Fictitious, an indie game made by a team of 11 for an interdisciplinary game design course. We used Wwise for the sound and music engine, and I implemented the sound effect systems in our Godot project. Over 120 sound effect files went into the final release. The game is available for download for Windows and Mac on the Itch.io page.
         </p>
             
-        <hr> -->
+        <hr>
         
         
         <h2 id="sc24_poster">SC24 Research Poster</h2>
