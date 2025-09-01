@@ -21,42 +21,33 @@
             <th><a href="/music">Music Stuff</a></th>
         </tr></table>
         <h1>Projects</h1>
-        <hr>
         
         <p>
             (Projects with a web-hosted demo are listed on the <a href="/demos">Demos</a> page instead of this one.)
         </p>
-        
+        <hr>
         
         <h2 id="clic">CLIC Handheld Digital Camera</h2>
         <h3>January - May 2025</h3>
-        
         <table><tr>
             <img style="width: 37%" src="clic/poster.png">
             <img style="width: 45%" src="clic/circuit.png">
         </tr></table>
-        
         <h3><a href="clic/CLIC_Poster.pdf", target="_blank">Project Poster</a> | <a href="https://github.com/Jorbon/clic_firmware", target="_blank">Firmware Repo</a></h3>
-        
         <p class="indent">
             My undergraduate capstone project was building a portable digital camera from parts. I was the software lead, and wrote the firmware in C in an embedded Linux environment. Frameworks like V4L2 and OpenGL ES were central to the firmware, alongside obscure custom drivers for our display device.
         </p><p class="indent">
             I worked with three friends, who identified parts and designed the hardware and case. I worked closely with them to make sure we had the features we wanted with our limited resources, and to avoid compatibility problems. For example, captured photos can be saved to an external SD card, but only while WiFi is disabled since the SDIO interface shared resources with the wireless networking hardware.
         </p>
-        
         <hr>
-        
         
         <h2 id="gisp2_camera">GISP Recon Camera</h2>
         <h3>January - May 2025</h3>
-        
         <table><tr>
             <img style="width: 40%" src="gisp2_camera/cad.png">
             <img style="width: 40%" src="gisp2_camera/prototype.jpg">
         </tr></table>
-        
         <h3><a href="https://github.com/Jorbon/gisp2_camera", target="_blank">Device Code</a> | <a href="https://github.com/Jorbon/camera_serial_monitor", target="_blank">Host Monitor App</a></h3>
-        
         <p class="indent">
             I designed and built a camera system to investigate the state of a Greenland Ice Sheet Project (GISP) borehole at summit station. The hole was sealed off decades ago, and now researchers want to survey it to help plan the re-drilling operation. The operating environment is very cold, dark, and space-constrained, and involves unique risks. Specifically, the device needed to fit in a 4cm cylindrical radius and operate at -30°C.
         </p><p class="indent">
@@ -64,52 +55,36 @@
         </p><p class="indent">
             The firmware for the microcontroller achieves the complex task of receiving and relaying a real-time image signal. This makes some code speed-critical, as it determines the maximum data rate of the image feed. On top of this, the OV2640 has very poor documentation, and configuring the sensor through I2C required extensive research and trial-and-error. I also wrote the host app for monitoring the image feeds and communicating with the device. Device firmware is baremetal C++, host app is written in Rust.
         </p>
-            
         <hr>
-        
         
         <h2 id="fictitious">Game Sound Design - Fictitious</h2>
         <h3>January - May 2025</h3>
-        
         <img style="width: 40%" src="fictitious/onepage.png">
-        
         <h3><a href="https://universityofkansas.itch.io/team-b-2025", target="_blank">Fictitious Itch.io Page</a> | <a href="fictitious/Fictitious - Game Design Document.pdf", target="_blank">Game Design Document</a></h3>
-        
         <p class="indent">
             I was the sound designer for Fictitious, an indie game made by a team of 11 for an interdisciplinary game design course. We used Wwise for the sound and music engine, and I implemented the sound effect systems in our Godot project. Over 120 sound effect files went into the final release. The game is available for download for Windows and Mac on the Itch.io page.
         </p>
-            
         <hr>
-        
         
         <h2 id="sc24_poster">SC24 Research Poster</h2>
         <h3>November 2024</h3>
-        
         <img src="sc24_poster/poster.png">
-        
         <h3><a href="https://sc24.conference-program.com/presentation/?id=post185&sess=sess487", target="_blank">Publication Site</a> | <a href="sc24_poster/SC24_Poster_Ben_Phillips.pdf", target="_blank">Full resolution PDF</a></h3>
-        
         <p class="indent">
             Last November I published and presented a poster at Supercomputing 2024 on my current research project with the <a href="https://sites.google.com/view/esam-el-araby/research-group" target="_blank">KUARQ</a> research group. The goal of the project was to develop a quantum algorithm emulation platform for the Cerebras WSE, making use of its highly parallel architecture for the demanding emulation process.
         </p>
-        
         <hr>
-        
         
         <h2 id="cool_elytra">Minecraft Mod: Cool Elytra Roll</h2>
         <h3>2021 - Present</h3>
-        
         <table><tr>
             <img style="width: 40%" src="cool_elytra/logo.png">
             <img style="width: 40%" src="cool_elytra/vid.png">
         </tr></table>
-        
         <h3><a href="https://www.curseforge.com/minecraft/mc-mods/cool-elytra-roll" target="_blank">Curseforge</a> | <a href="https://modrinth.com/mod/cool-elytra-roll" target="_blank">Modrinth</a></h3>
-        
         <p class="indent">
             This is the first Minecraft mod that I have created, published, and maintained. The mod uses vector math and linear algebra to make the camera and controls of the flight system closer to real aviation physics. It does this by applying extra transoformation matrices to the camera while transforming inputs to different coordinate spaces. The repository has a handful of other contributors who have helped me add a configuration menu and keep the mod up to date with the game.
         </p>
-        
         <!-- No curseforge api key, probably not worth doing -->
         <!-- <script>
             fetch("https://api.modrinth.com/v2/project/cool-elytra-roll", { method: "GET" })
@@ -121,20 +96,15 @@
                 if (response.ok) return response.json()
             }).then(data => console.log(data))
         </script> -->
-        
         <hr>
-        
         
         <h2 id="disk_pie">Disk Pie Utility</h2>
         <h3>May 2024</h3>
-        
         <table><tr>
             <img style="width: 30%" src="disk_pie/full.png">
             <img style="width: 47%" src="disk_pie/zoom.png">
         </tr></table>
-        
         <h3><a href="https://github.com/Jorbon/disk_pie">GitHub Repo</a></h3>
-        
         <p class="indent">
             This desktop application does a multithreaded scan of all files on the root directory and displays the file system as a tiered pie chart scaled by storage size. Files in folders cascade outwards so that relative file size is visible for all folder levels at once. The path and exact size of a file or folder can be seen by hovering over its slice. Clicking on a slice draws a new pie chart with that directory in the root position.
         </p><p class="indent">
@@ -142,107 +112,79 @@
         </p><p class="indent">
             This is my first project to use a creative commons license, which I plan to use frequently going forwards.
         </p>
-        
         <hr>
-        
         
         <h2 id="rcr">Rock Chalk Rendezvous</h2>
         <h3>February - May 2024</h3>
-        
         <table><tr>
             <img style="width: 40%" src="rcr/calendar.png">
             <img style="width: 40%" src="rcr/availability.png">
         </tr></table>
-        
         <h3><a href="https://github.com/delster1/RockChalkRendezvous">GitHub Repo</a></h3>
-        
         <p class="indent">
             This group semester project was made for my software engineering class at KU. We created an online calendar app that works like When2Meet, but makes it easier to schedule multiple meetings with the same group. Instead of communicating your availability separately for each event, you create an account with a single calendar, then join groups where members can see the overall availability of everyone in the group based on individual calendars.
         </p><p class="indent">
             The app centralizes data on a backend server, giving access using a REST API and requiring correct authentication to access private data. The front end is implemented as a TUI using ncurses. Significant challenges included dealing closely with time and calendar systems, and effectively coordinating work across the whole team.
         </p>
-        
         <hr>
-        
         
         <h2 id="gl_engine">OpenGL Graphics Engine</h2>
         <h3>August 2023 - February 2024</h3>
-        
         <table><tr>
             <img style="width: 40%" src="gl_engine/normal.png">
             <img style="width: 39%" src="gl_engine/post.png">
         </tr></table>
-        
         <h3><a href="https://github.com/Jorbon/gl_engine">GitHub Repo</a></h3>
-        
         <p class="indent">
             This is a 3D renderer that uses OpenGL shaders to implement both common graphics techniques and experimental artistic effects. Texturing, specular mapping, several variations of smoothed shadow mapping, a blinn-phong shading model, and a complex post-processing shader were all implemented. The post shader discretizes color channels to limit the color palette and uses a modified Sobel kernel to outline feature edges, both of which create a toon-like aesthetic that I want to use in a future project.
         </p>
-        
         <hr>
-        
         
         <h2 id="guitar_wiring">Guitar Wiring Panel</h2>
         <h3>October - December 2023</h3>
-        
         <table><tr>
             <img style="width: 14%" src="guitar_wiring/wires.jpg">
             <img style="width: 35%" src="guitar_wiring/cad.png">
             <img style="width: 25%" src="guitar_wiring/board.jpg">
         </tr></table>
-        
         <p class="indent">
             I was preparing for a wiring repair on one of my guitars when I realized how many possibilities there are for custom pickup wiring. Specifically, there with 572 unique wiring configurations for a 2-humbucker setup. This project was an effort to make all of them easily accessible and enable experimentation with wiring.
         </p><p class="indent">
             I designed, modeled, and wired a tiny patch board to replace the electronics panel on the back of the guitar, so that I could use removable plugs to re-wire the pickups without tools or soldering. It worked as intended, but had some electrical connection and comfort issues because it was highly constrained in space and budget. Ultimately, I did my experimenting and then changed it back to a regular pickup switch, using the wirings that I liked the most.
         </p>
-        
         <hr>
-        
         
         <h2 id="wikidungeon">Wikidungeon</h2>
         <h3>April 2023</h3>
-        
         <img style="width: 50%" src="wikidungeon/cover.png">
-        
         <h3><a href="https://devpost.com/software/wikidungeon" target="_blank">Devpost Page</a></h3>
-        
         <p class="indent">
             This was a HackKU 2023 project that myself and two friends created in 36 hours, winning first prize in the competition's general track. It takes the idea of a "wikipedia race" and makes it into a rogue-like dungeon crawler. It is intended to be a proof of concept in creative data re-interpretation.
         </p><p class="indent">
             Quite literally, it is a game engine that fetches a wikipedia page and then parses its content to procedurally build a dungeon level. Each section of the article becomes a room in a branching layout, while each hyperlink becomes an item found in the rooms. The link items are used to navigate to the article that they point to, which is used to generate a new level of the dungeon. As an aesthetic touch, rooms are also decorated with a random image from their section. In short, Wikidungeon is simultaneously one of the largest video game dungeons and one of the strangest web browsers ever created.
         </p>
-        
         <hr>
-        
         
         <h2 id="moire_models">Moire Pattern Research</h2>
         <h3>April - June 2023</h3>
-        
         <table><tr>
             <img style="width: 40%" src="moire_models/atoms.png">
             <img style="width: 40%" src="moire_models/bonds.png">
         </tr></table>
-        
         <h3><a href="https://github.com/Jorbon/moire_models" target="_blank">GitHub Repo</a></h3>
-        
         <p class="indent">
             In the spring of 2023 I conducted theory research on the Moire patterns of twisted 2D PdSe2 systems in my condensed matter research lab. I wrote software to visualize Moire patterns in large flakes, and I did mathematical analysis of the crystal geometries to derive equations for the Moire lattice parameters.
         </p>
-        
         <hr>
-        
         
         <h2 id="dnd_map">Tabletop Game Map App</h2>
         <h3>March - May 2021</h3>
-        
         <h3><a href="https://github.com/Jorbon/dnd_map" target="_blank">GitHub Repo</a></h3>
-        
         <p class="indent">
             This web app allows GMs/DMs to import images of game world maps and control what areas of the maps are visible to players. It is designed to make fog-of-war easy to manage with high-quality visuals, and has been used with success in sessions where I participated.
         </p>
-        
         <hr>
+        
     </div>
 </body>
 </html>
