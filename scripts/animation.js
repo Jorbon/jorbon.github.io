@@ -11,7 +11,7 @@ let mobile = false;
 
 function on_resize(event) {
     
-    main_div.style.width = "50%";
+    main_div.style.width = "60%";
     mobile = (window.innerHeight > window.innerWidth || main_div.clientWidth + 15 >= window.innerWidth); // Best I can do on a static file server
     
     if (main_div.scrollHeight < window.innerHeight)
