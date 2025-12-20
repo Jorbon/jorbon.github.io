@@ -10,22 +10,143 @@
     <canvas id="background"></canvas>
     
     <div id="main_container">
+        <hr>
+        <h2>Ben Phillips - Official Website</h2>
+        <table class="menu_table"><tr>
+            <th class="current"><a href="/">Home</a></th>
+            <th><a href="/about">About Me</a></th>
+            <th><a href="/demos">Demos</a></th>
+            <th><a href="/projects">Projects</a></th>
+            <th><a href="/projects/game_dev">Game Devblog</a></th>
+            <!-- <th><a href="/music">Music Stuff</a></th> -->
+        </tr></table>
+        <hr>
+        
+        <div style="display: grid; grid-template-columns: 40% 60%; justify-items: center; align-items: baseline; column-gap: 0pt;">
+            <img src="about/ben.jpg" style="grid-column: 1; grid-row: 1; margin: 10pt; width: 70%;">
+            <div style="grid-column: 2; grid-row: 1; margin: 0pt;">
+                <h1 style="text-align: center; margin: 20pt; margin-top: 10pt;">Ben Phillips</h1>
+                <p style="font-size: 18pt; text-align: center; margin: 10pt;">
+                    - Computer Engineer
+                </p><p style="font-size: 18pt; text-align: center; margin: 10pt;">
+                    - Mathematician
+                </p></p><p style="font-size: 18pt; text-align: center; margin: 10pt;">
+                    - Software Architect
+                </p><p style="font-size: 18pt; text-align: center; margin: 10pt;">
+                    - Tools Designer
+                </p><p style="font-size: 18pt; text-align: center; margin: 10pt;">
+                    - Musician
+                </p>
+            </div>
+        </div>
+        
+        
+        <p style="text-align: center; margin: 20pt;">
+            <i>My mission:</i> To apply mathematics to technology to enable both artistic and pragmatic creation.
+        </p>
         
         <hr>
-        <h1>Ben Phillips - Official Website</h1>
         
+        <h2>Featured Projects</h2>
+        
+        <div style="display: grid; grid-template-columns: 35% 65%; justify-items: center; align-items: baseline; column-gap: 10pt; row-gap: 0pt;">
+            <img style="grid-row: 1; grid-column: 1; margin-left: 0pt; margin-right: 0pt; width: 100%;" src="/projects/sc24_poster/poster.png">
+            
+            <div style="grid-row: 1; grid-column: 2; margin: 0pt; margin-top: 10pt; width: 100%;">
+                <h3><a href="/projects#sc24_poster">Quantum Algorithm Simulation</a></h3>
+                <ul style="text-align: left;">
+                    <li style="margin: 10pt;">Researched quantum computing with <a href="https://sites.google.com/view/esam-el-araby/research-group" target="_blank">KUARQ</a> group</li>
+                    <li style="margin: 10pt;">Designed and optimized simulation kernels for Cerebras's massively parallel wafer scale engine using their SDK</li>
+                    <li style="margin: 10pt;">Learned unique low-level hardware architecture and domain-specific language CSL</li>
+                    <li style="margin: 10pt;">Published at Supercomputing 2024</li>
+                </ul>
+            </div>
+            
+            <img style="grid-row: 2; grid-column: 1; margin-left: 0pt; margin-right: 0pt; width: 100%;" src="/projects/clic/poster_low.png">
+            
+            <div style="grid-row: 2; grid-column: 2; margin: 0pt; margin-top: 10pt; width: 100%;">
+                <h3><a href="/projects#clic">CLIC Handheld Digital Camera</a></h3>
+                <ul style="text-align: left;">
+                    <li style="margin: 10pt;">Computer Engineering capstone project</li>
+                    <li style="margin: 10pt;">Created a consumer-grade portable camera</li>
+                    <li style="margin: 10pt;">Wrote firmware in an embedded linux environment</li>
+                </ul>
+            </div>
+            
+            <img style="grid-row: 3; grid-column: 1; margin-left: 0pt; margin-right: 0pt; width: 100%;" src="/projects/gisp2_camera/prototype.jpg">
+            
+            <div style="grid-row: 3; grid-column: 2; margin: 0pt; margin-top: 10pt; width: 100%;">
+                <h3><a href="/projects#gisp2_camera">GISP Recon Camera</a></h3>
+                <ul style="text-align: left;">
+                    <li style="margin: 10pt;">Developed embedded device for the Greenland Ice Sheet Project</li>
+                    <li style="margin: 10pt;">Streams three live camera views at once to a custom host PC application</li>
+                    <li style="margin: 10pt;">Tight space, budget, and power design constraints</li>
+                </ul>
+            </div>
+        </div>
+        
+        <h3><a href="/projects">All Projects</a></h3>
         <hr>
         
-        <table class="menu_table home_menu_table">
-            <tr><th class="current"><a href="/">Home</a></th></tr>
-            <tr><th><a href="/about">About Me</a></th></tr>
-            <tr><th><a href="/demos">Demos</a></th></tr>
-            <tr><th><a href="/projects">Projects</a></th></tr>
-            <tr><th><a href="/projects/game_dev">Game Devblog</a></th></tr>
-            <!-- <tr><th><a href="/music">Music Stuff</a></th></tr> -->
-        </table>
+        <h2>Featured Demos</h2>
         
+        <div style="display: grid; grid-template-columns: 35% 65%; justify-items: center; align-items: baseline; column-gap: 10pt; row-gap: 0pt;">
+            <img style="grid-row: 1; grid-column: 1; margin-left: 0pt; margin-right: 0pt; width: 100%;" src="/projects/wgpu-sandbox/teapot.png">
+            
+            <div style="grid-row: 1; grid-column: 2; margin: 0pt; margin-top: 10pt; width: 100%;">
+                <h3><a href="https://jorbon.github.io/wgpu-sandbox" target="_blank">WGPU Sandbox</a></h3>
+                <ul style="text-align: left;">
+                    <li style="margin: 10pt;">Hardware-accelerated graphics using WGPU and Rust</li>
+                    <li style="margin: 10pt;">Compatible with all major backend APIs</li>
+                    <li style="margin: 10pt;">Supports both native and web via WebAssembly</li>
+                    <li style="margin: 10pt;">Framework for future graphics projects</li>
+                </ul>
+            </div>
+            
+            <img style="grid-row: 2; grid-column: 1; margin-left: 0pt; margin-right: 0pt; width: 100%;" src="/projects/js_fractal_viewer/julia.png">
+            
+            <div style="grid-row: 2; grid-column: 2; margin: 0pt; margin-top: 10pt; width: 100%;">
+                <h3><a href="https://jorbon.github.io/js_fractal_viewer/" target="_blank">Fractal Explorer</a></h3>
+                <ul style="text-align: left;">
+                    <li style="margin: 10pt;">JavaScript Mandelbrot + Julia set renderer</li>
+                    <li style="margin: 10pt;">Up / Down arrows zoom</li>
+                    <li style="margin: 10pt;">Spacebar centers view on cursor</li>
+                    <li style="margin: 10pt;">J / M switch between Julia and Mandelbrot set</li>
+                </ul>
+            </div>
+        </div>
+        
+        <h3><a href="/demos">All Demos</a></h3>
         <hr>
+        
+        <table style="font-size: 12pt; margin-bottom: -20pt;"><tr>
+            <th><a href="mailto:ben.a.phillips@outlook.com">
+                <div style="display: flex; align-items: center;">
+                    <svg style="padding-right: 10pt;" width="18pt" height="18pt" fill="currentColor" version="1.1" viewbox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                        <path id="email-top" d="M16,16.8l13.8-9.2C29.2,5.5,27.3,4,25,4H7C4.7,4,2.8,5.5,2.2,7.6L16,16.8z"/>
+                        <path id="email-bottom" d="M16.6,18.8C16.4,18.9,16.2,19,16,19s-0.4-0.1-0.6-0.2L2,9.9V23c0,2.8,2.2,5,5,5h18c2.8,0,5-2.2,5-5V9.9L16.6,18.8z"/>
+                    </svg>
+                    ben.a.phillips@outlook.com
+                </div>
+            </a></th>
+            <th><a href="https://www.linkedin.com/in/ben-a-phillips" target="_blank">
+                <div style="display: flex; align-items: center;">
+                    <svg style="padding-right: 10pt;" width="18pt" height="18pt" fill="currentColor" version="1.1" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path id="linkedin" d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 000 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z"/>
+                    </svg>
+                    /in/ben-a-phillips
+                </div>
+            </a></th>
+            <th><a href="https://github.com/Jorbon" target="_blank">
+                <div style="display: flex; align-items: center;">
+                    <svg style="padding-right: 10pt;" width="18pt" height="18pt" fill="currentColor" version="1.1" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path id="github" d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+                    </svg>
+                    github.com/Jorbon
+                </div>
+            </a></th>
+        </tr></table>
+        
     </div>
 </body>
 </html>
