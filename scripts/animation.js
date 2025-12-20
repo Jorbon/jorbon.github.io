@@ -10,9 +10,9 @@ let mobile = false;
 
 
 function on_resize(event) {
-    
     main_div.style.width = "60%";
     mobile = (window.innerHeight > window.innerWidth || main_div.clientWidth + 15 >= window.innerWidth); // Best I can do on a static file server
+    if (mobile) main_div.style.width = "auto";
     
     if (main_div.scrollHeight < window.innerHeight)
         main_div.style.marginTop = (window.innerHeight - main_div.scrollHeight) / 2 + "px";
