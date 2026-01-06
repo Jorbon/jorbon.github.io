@@ -102,6 +102,20 @@ table {
     }
 }
 
+.menu_button {
+    font-size: 20pt;
+    font-weight: bold;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color: rgb(45, 80, 45);
+    display: block;
+    color: lightgray;
+    padding-left: 7pt;
+    padding-right: 7pt;
+    padding-top: 5pt;
+    padding-bottom: 7pt;
+    text-decoration: none;
+}
+
 .home_menu_table {
     font-size: 24pt;
     margin-top: -5pt;
