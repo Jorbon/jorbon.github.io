@@ -15,83 +15,155 @@
         <table class="menu_table"><tr>
             <th><a href="/">Home</a></th>
             <th><a href="/about">About Me</a></th>
-            <th><a href="/demos">Demos</a></th>
             <th class="current"><a href="/projects">Projects</a></th>
+            <th><a href="/demos">Demos</a></th>
             <th><a href="/projects/game_dev">Game Devblog</a></th>
-            <!-- <th><a href="/music">Music Stuff</a></th> -->
         </tr></table>
         <h1>Projects</h1>
-        
-        <table class="menu_table" style="margin-top: -15pt; margin-bottom: -15pt; font-size: 18pt;"><tr>
-            <td>Page</td>
-            <th class="current"><a href=".">1</a></th>
-            <th><a href="page2.html">2</a></th>
-            <th><a href="page3.html">3</a></th>
-        </tr></table>
-        
         
         <p style="text-align: center;">
             (See the <a href="/demos">Demos</a> page for web-hosted projects.)
         </p>
         <hr>
         
-        <h2 id="clic">CLIC Handheld Digital Camera</h2>
-        <h3>January - May 2025</h3>
-        <table><tr>
-            <img style="width: 37%" src="clic/poster_low.png">
-            <img style="width: 45%" src="clic/circuit.png">
-        </tr></table>
-        <h3><a href="clic/CLIC_Poster.pdf" target="_blank">Project Poster</a> | <a href="https://github.com/Jorbon/clic_firmware", target="_blank">Firmware Repo</a></h3>
-        <p class="indent">
-            My undergraduate capstone project was building a portable digital camera from parts. I was the software lead, and wrote the firmware in C in an embedded Linux environment. Frameworks like V4L2 and OpenGL ES were central to the firmware, alongside obscure custom drivers for our display device.
-        </p><p class="indent">
-            I worked with three friends, who identified parts and designed the hardware and case. I worked closely with them to make sure we had the features we wanted with our limited resources, and to avoid compatibility problems. For example, captured photos can be saved to an external SD card, but only while WiFi is disabled since the SDIO interface shared resources with the wireless networking hardware.
-        </p>
-        <hr>
+        <div style="display: flex; justify-content: center; margin: 10pt;">
+            <a style="width: 75%;" class="menu_tile" href="sc24_poster">
+                <div style="display: grid; grid-template-columns: 15% 85%; justify-items: center; align-items: center; margin: 0pt;">
+                    <img style="grid-column: 1; width: 100%; margin: 0pt;" src="sc24_poster/poster.png">
+                    <div style="grid-column: 2; margin-left: 20pt; margin-bottom: 5pt;">
+                        <h3>Quantum Algorithm Simulation</h3>
+                        <p>Published research project establishing HPC wafer-scale compute platforms as viable architectures for simulating quantum circuits.</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div style="display: flex; justify-content: center; margin: 10pt;">
+            <a style="width: 75%;" class="menu_tile" href="clic">
+                <div style="display: grid; grid-template-columns: 15% 85%; justify-items: center; align-items: center; margin: 0pt;">
+                    <img style="grid-column: 1; width: 100%; margin: 0pt;" src="clic/poster_low.png">
+                    <div style="grid-column: 2; margin-left: 20pt; margin-bottom: 5pt;">
+                        <h3>CLIC Handheld Digital Camera</h3>
+                        <p>Team capstone project where I designed firmware and device driver integration on embedded Linux.</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div style="display: flex; justify-content: center; margin: 10pt;">
+            <a style="width: 75%;" class="menu_tile" href="gisp2_camera">
+                <div style="display: grid; grid-template-columns: 15% 85%; justify-items: center; align-items: center; margin: 0pt;">
+                    <img style="grid-column: 1; width: 100%; margin: 0pt;" src="gisp2_camera/prototype.jpg">
+                    <div style="grid-column: 2; margin-left: 20pt; margin-bottom: 5pt;">
+                        <h3>Embedded GISP Recon Camera</h3>
+                        <p>Multi-camera baremetal video capture device with tight space, power, and budget constraints.</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div style="display: flex; justify-content: center; margin: 10pt;">
+            <a style="width: 75%;" class="menu_tile" href="cool_elytra">
+                <div style="display: grid; grid-template-columns: 15% 85%; justify-items: center; align-items: center; margin: 0pt;">
+                    <img style="grid-column: 1; width: 100%; margin: 0pt;" src="cool_elytra/logo_low.png">
+                    <div style="grid-column: 2; margin-left: 20pt; margin-bottom: 5pt;">
+                        <h3>Minecraft Mod: Cool Elytra Roll</h3>
+                        <p>Open-source mod to add physics-based camera rotation and alternative camera control modes.</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div style="display: flex; justify-content: center; margin: 10pt;">
+            <a style="width: 75%;" class="menu_tile" href="wikidungeon">
+                <div style="display: grid; grid-template-columns: 15% 85%; justify-items: center; align-items: center; margin: 0pt;">
+                    <img style="grid-column: 1; width: 100%; margin: 0pt;" src="wikidungeon/cover.png">
+                    <div style="grid-column: 2; margin-left: 20pt; margin-bottom: 5pt;">
+                        <h3>Wikidungeon</h3>
+                        <p>First prize winning HackKU project programmatically transforming Wikipedia link topology into game level structure.</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div style="display: flex; justify-content: center; margin: 10pt;">
+            <a style="width: 75%;" class="menu_tile" href="rcr">
+                <div style="display: grid; grid-template-columns: 15% 85%; justify-items: center; align-items: center; margin: 0pt;">
+                    <img style="grid-column: 1; width: 100%; margin: 0pt;" src="rcr/availability.png">
+                    <div style="grid-column: 2; margin-left: 20pt; margin-bottom: 5pt;">
+                        <h3>Rock Chalk Rendezvous</h3>
+                        <p>Calendar scheduling platform using a RESTful architecture to combine When2Meet and Outlook calendar features.</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div style="display: flex; justify-content: center; margin: 10pt;">
+            <a style="width: 75%;" class="menu_tile" href="disk_pie">
+                <div style="display: grid; grid-template-columns: 15% 85%; justify-items: center; align-items: center; margin: 0pt;">
+                    <img style="grid-column: 1; width: 100%; margin: 0pt;" src="disk_pie/full.png">
+                    <div style="grid-column: 2; margin-left: 20pt; margin-bottom: 5pt;">
+                        <h3>Disk Pie Storage Visualizer</h3>
+                        <p>Desktop app displaying a drive's complete file tree by storage space for identifying large files.</p>
+                    </div>
+                </div>
+            </a>
+        </div>
         
-        <h2 id="gisp2_camera">GISP Recon Camera</h2>
-        <h3>January - May 2025</h3>
-        <table><tr>
-            <img style="width: 40%" src="gisp2_camera/cad.png">
-            <img style="width: 40%" src="gisp2_camera/prototype.jpg">
-        </tr></table>
-        <h3><a href="https://github.com/Jorbon/gisp2_camera", target="_blank">Device Code</a> | <a href="https://github.com/Jorbon/camera_serial_monitor" target="_blank">Host Monitor App</a></h3>
-        <p class="indent">
-            I designed and built a camera system to investigate the state of a Greenland Ice Sheet Project (GISP) borehole at summit station. The hole was sealed off decades ago, and now researchers want to survey it to help plan the re-drilling operation. The operating environment is very cold, dark, and space-constrained, and involves unique risks. Specifically, the device needed to fit in a 4cm cylindrical radius and operate at -30°C.
-        </p><p class="indent">
-            Everything beyond these constraints and my budget was up to me to choose a strategy, parts, and structure. My prototype uses three separate OV2640 image sensors and wide-angle lenses to achieve an uninterrupted 360° view of the walls of the borehole. I chose a Teensy 4.1 as the microcontroller for its high clock rate, large GPIO array, narrow footprint, and low cost. Finally, power and data from a computer on the surface would be delivered through a 300ft CAT6 cable soldered to the Teensy's USB pads.
-        </p><p class="indent">
-            The firmware for the microcontroller achieves the complex task of receiving and relaying a real-time image signal. This makes some code speed-critical, as it determines the maximum data rate of the image feed. On top of this, the OV2640 has very poor documentation, and configuring the sensor through I2C required extensive research and trial-and-error. I also wrote the host app for monitoring the image feeds and communicating with the device. Device firmware is baremetal C++, host app is written in Rust.
-        </p>
-        <hr>
         
-        <h2 id="fictitious">Game Sound Design - Fictitious</h2>
-        <h3>January - May 2025</h3>
-        <img style="width: 40%" src="fictitious/onepage_low.png">
-        <h3><a href="https://universityofkansas.itch.io/team-b-2025" target="_blank">Fictitious Itch.io Page</a> | <a href="fictitious/Fictitious - Game Design Document.pdf" target="_blank">Game Design Document</a></h3>
-        <p class="indent">
-            I was the sound designer for Fictitious, an indie game made by a team of 11 for an interdisciplinary game design course. We used Wwise for the sound and music engine, and I implemented the sound effect systems in our Godot project. Over 120 sound effect files went into the final release. The game is available for download for Windows and Mac on the Itch.io page.
-        </p>
-        <hr>
+        <div style="display: flex; justify-content: center; margin: 10pt;">
+            <a style="width: 75%;" class="menu_tile" href="levic">
+                <div style="display: grid; grid-template-columns: 15% 85%; justify-items: center; align-items: center; margin: 0pt;">
+                    <img style="grid-column: 1; width: 100%; margin: 0pt;" src="levic/code.png">
+                    <div style="grid-column: 2; margin-left: 20pt; margin-bottom: 5pt;">
+                        <h3>Levi Compiler</h3>
+                        <p>Compiler for the academic C-like language Levi, developed for my compiler construction course.</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div style="display: flex; justify-content: center; margin: 10pt;">
+            <a style="width: 75%;" class="menu_tile" href="gl_engine">
+                <div style="display: grid; grid-template-columns: 15% 85%; justify-items: center; align-items: center; margin: 0pt;">
+                    <img style="grid-column: 1; width: 100%; margin: 0pt;" src="gl_engine/normal.png">
+                    <div style="grid-column: 2; margin-left: 20pt; margin-bottom: 5pt;">
+                        <h3>OpenGL Graphics Engine</h3>
+                        <p>Adventures in shadow mapping, physically-based rendering, and post-processing effects in Rust + OpenGL.</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div style="display: flex; justify-content: center; margin: 10pt;">
+            <a style="width: 75%;" class="menu_tile" href="guitar_wiring">
+                <div style="display: grid; grid-template-columns: 15% 85%; justify-items: center; align-items: center; margin: 0pt;">
+                    <img style="grid-column: 1; width: 100%; margin: 0pt;" src="guitar_wiring/board_low.jpg">
+                    <div style="grid-column: 2; margin-left: 20pt; margin-bottom: 5pt;">
+                        <h3>Guitar Patch Panel</h3>
+                        <p>Custom wiring + CAD solution for ultra-configurable guitar pickup wiring.</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div style="display: flex; justify-content: center; margin: 10pt;">
+            <a style="width: 75%;" class="menu_tile" href="fictitious">
+                <div style="display: grid; grid-template-columns: 15% 85%; justify-items: center; align-items: center; margin: 0pt;">
+                    <img style="grid-column: 1; width: 100%; margin: 0pt;" src="fictitious/onepage_low.png">
+                    <div style="grid-column: 2; margin-left: 20pt; margin-bottom: 5pt;">
+                        <h3>Indie Game Sound Design: Fictitious</h3>
+                        <p>Sound design role in a team game design course contributing to my film minor.</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div style="display: flex; justify-content: center; margin: 10pt;">
+            <a style="width: 75%;" class="menu_tile" href="moire_models">
+                <div style="display: grid; grid-template-columns: 15% 85%; justify-items: center; align-items: center; margin: 0pt;">
+                    <img style="grid-column: 1; width: 100%; margin: 0pt;" src="moire_models/atoms.png">
+                    <div style="grid-column: 2; margin-left: 20pt; margin-bottom: 5pt;">
+                        <h3>Atomic Moire Pattern Visualizer</h3>
+                        <p>Crystalline atomic renderer for transition metal dichalcogens for my condensed matter physics research lab.</p>
+                    </div>
+                </div>
+            </a>
+        </div>
         
-        <h2 id="sc24_poster">Quantum Algorithm Simulation</h2>
-        <h3>November 2024</h3>
-        <img style="width: 60%;" src="sc24_poster/poster.png">
-        <h3><a href="https://sc24.conference-program.com/presentation/?id=post185&sess=sess487" target="_blank">Publication Site</a> | <a href="sc24_poster/SC24_Poster_Ben_Phillips.pdf" target="_blank">Full resolution PDF</a></h3>
-        <p class="indent">
-            Last November I published and presented a poster at Supercomputing 2024 on my current research project with the <a href="https://sites.google.com/view/esam-el-araby/research-group" target="_blank">KUARQ</a> research group. The goal of the project is to develop a quantum algorithm emulation platform for the Cerebras WSE, making use of its highly parallel architecture for the demanding emulation process.
-        </p>
-        <hr>
         
-        <table class="menu_table" style="margin-top: -5pt; margin-bottom: -5pt; font-size: 18pt;"><tr>
-            <td>Page</td>
-            <th class="current"><a href=".">1</a></th>
-            <th><a href="page2.html">2</a></th>
-            <th><a href="page3.html">3</a></th>
-        </tr></table>
         
         <hr>
-
         <table style="font-size: 12pt; margin-bottom: -20pt;"><tr>
             <th><a href="mailto:ben.a.phillips@outlook.com">
                 <div style="display: flex; align-items: center;">

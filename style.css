@@ -116,6 +116,17 @@ table {
     text-decoration: none;
 }
 
+.menu_tile {
+    background-color: rgb(40, 60, 40);
+    display: block;
+    color: lightgray;
+    padding-left: 20pt;
+    padding-right: 20pt;
+    padding-top: 10pt;
+    padding-bottom: 10pt;
+    text-decoration: none;
+}
+
 .home_menu_table {
     font-size: 24pt;
     margin-top: -5pt;

@@ -1,7 +1,7 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>Ben Phillips - About Me</title>
+    <title>Ben Phillips - OpenGL Graphics Engine</title>
     <link rel="icon" href="/icon.png">
     <link href="/style.css" rel="stylesheet" type="text/css">
     <script defer src="/scripts/animation.js"></script>
@@ -14,37 +14,30 @@
         <h2>Ben Phillips - Official Website</h2>
         <table class="menu_table"><tr>
             <th><a href="/">Home</a></th>
-            <th class="current"><a href="/about">About Me</a></th>
+            <th><a href="/about">About Me</a></th>
             <th><a href="/projects">Projects</a></th>
             <th><a href="/demos">Demos</a></th>
             <th><a href="/projects/game_dev">Game Devblog</a></th>
-            <!-- <th><a href="/music">Music Stuff</a></th> -->
         </tr></table>
-        <h1>About Me</h1>
         <hr>
         
-        <img src="ben.jpg" style="width: 30%; float: left; margin-top: 10pt; margin-right: 30pt;"></td>
         
-        
+        <h1>OpenGL Graphics Engine</h1>
+        <h3>August 2023 - February 2024</h3>
         <p class="indent">
-            Hi! I'm a university student with a wide variety of technical and artistic hobbies. I study digital electronics, physics, and film and media in my degree program at the University of Kansas.
+            This is a 3D renderer that uses OpenGL shaders to implement both common graphics techniques and experimental artistic effects. Texturing, specular mapping, several variations of smoothed shadow mapping, a blinn-phong shading model, and a complex post-processing shader were all implemented. The post shader discretizes color channels to limit the color palette and uses a modified Sobel kernel to outline feature edges, both of which create a toon-like aesthetic that I want to use in a future project.
         </p>
-        <p class="indent">
-            Some of the programming projects in my portfolio can be found on the <a href="/demos">Demos</a> page of this site. Others are described in my project listings, including many that involve electronics hardware.
-        </p>
-        <p class="indent">
-            My primary career interest is to apply mathematics to technology to achieve visible, audible, or tangible impacts. To this end, I have experience with computer graphics, physics simulation, sound design, arranging and performing music, and programming lights for live shows.
-        </p>
-        <p class="indent">
-            This website is hosted on github pages, a static file-server platform. All of the HTML, scripting, and styling has been written by myself. The background animations use simple physics simulation techniques and are chosen because they have simple rules with interesting emergent behavior.
-        </p>
+        <h3><a href="https://github.com/Jorbon/gl_engine" target="_blank">GitHub Repo</a></h3>
+        <img style="width: 60%" src="normal.png">
+        <img style="width: 60%" src="post.png">
         
-        <p style="text-align: center; font-size: 16pt;">
-            <a href="Ben_Phillips_Resume_September_2025.pdf" target="_blank">Ben's Resume [PDF]</a>
-        </p>
         
-        <hr style="clear: left;">
+        <hr>
+        <div style="display: flex; justify-content: center; margin-top: 10pt;">
+            <a class="menu_button" style="width: 30%;" href="/projects">All Projects</a>
+        </div>
         
+        <hr>
         <table style="font-size: 12pt; margin-bottom: -20pt;"><tr>
             <th><a href="mailto:ben.a.phillips@outlook.com">
                 <div style="display: flex; align-items: center;">
